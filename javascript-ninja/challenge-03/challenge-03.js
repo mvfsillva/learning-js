@@ -1,5 +1,5 @@
 // Declarar uma variável qualquer, que receba um objeto vazio.
-var myvar = {};
+var objeto = {};
 
 /*
 Declarar uma variável `pessoa`, que receba suas informações pessoais.
@@ -18,7 +18,7 @@ var pessoa = {
   , sobrenome: 'Silva'
   , sexo: 'Masculino'
   , idade: '23'
-  , altura: '?'
+  , altura: 169
   , peso: 63
   , andando: false
   , caminhouQuantosMetros: 0
@@ -44,8 +44,8 @@ valor dessa propriedade a quantidade passada por parâmetro;
 - Ele deverá modificar o valor da propriedade `andando` para o valor
 booleano que representa "verdadeiro";
 */
-pessoa.andar = function(x){
-  pessoa.caminhouQuantosMetros = pessoa.caminhouQuantosMetros + x;
+pessoa.andar = function(m){
+  pessoa.caminhouQuantosMetros += m;
   pessoa.andando = true;
 }
 
