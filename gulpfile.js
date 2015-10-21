@@ -6,7 +6,7 @@ var gulp  = require('gulp')
 gulp.task('test', function(cb) {
   gulp.src('test/**/*.js')
   .pipe(mocha({
-    repoter: 'spec',
+    reporter: 'spec',
     ui: 'bdd',
     timeout:30000,
   }))
