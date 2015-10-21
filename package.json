@@ -1,0 +1,23 @@
+{
+  "name": "learning-js",
+  "version": "1.0.0",
+  "description": "Examples and exercises to practice JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mvfsilva/learning-js.git"
+  },
+  "author": "Marcus Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mvfsilva/learning-js/issues"
+  },
+  "homepage": "https://github.com/mvfsilva/learning-js",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-mocha": "^2.1.3"
+  }
+}
