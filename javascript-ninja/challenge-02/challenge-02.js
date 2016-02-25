@@ -35,7 +35,7 @@ Crie uma função com as seguintes características:
 function newCalc(x, y, z){
   if(x === undefined || y === undefined || z === undefined)
     return 'Preencha todos os valores corretamente!!';
-return (x * y * z) + 2;
+  return (x * y * z) + 2;
 }
 
 // Invoque a função criada acima, passando só dois números como argumento.
