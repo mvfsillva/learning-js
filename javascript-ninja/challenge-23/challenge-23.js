@@ -68,7 +68,7 @@
     if(isLastItemOperation())
       $visor.value = $visor.value.slice(0, -1);
   }
-
+  //Refactor
   function handClickEqual() {
     removeLastItemIfItIsAnOperator();
     var values = $visor.value.match(/\d+[+x÷-]?/g);
