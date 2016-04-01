@@ -1,2 +1,2 @@
 # Learning JavaScript
-Examples and exercises to practice JavaScript.
+Examples and exercices to practice JavaScript.
