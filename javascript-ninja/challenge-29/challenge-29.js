@@ -1,4 +1,4 @@
-(function() {
+(function(DOM) {
   'use strict';
 
   /*
@@ -36,4 +36,4 @@
   que será nomeado de "app".
   */
 
-})();
+})(window.DOM);
