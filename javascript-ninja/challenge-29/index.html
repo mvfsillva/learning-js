@@ -2,33 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Challenge 29</title>
+  <title>mvfsilva cars</title>
 </head>
 <body>
-  <div data-js="company">
-    <h3 data-js="company-name"></h3>
-    <h3 data-js="company-phone"></h3>
-  </div>
-  <div>
-    <form data-js="form">
-      <p data-js="">
-        Imagem: <input type="text" data-js="url-image">
-      </p>
-      <p data-js="">
-        Modelo: <input type="text" data-js="model">
-      </p>
-      <p data-js="">
-        Ano: <input type="text" data-js="year">
-      </p>
-      <p data-js="">
-        Placa: <input type="text" data-js="board">
-      </p>
-      <p data-js="">
-        Cor: <input type="text" data-js="color">
-      </p>
-      <button type="submit">Cadastrar</button>
-    </form>
-  </div>
+  <header>
+    <h2>
+      <span data-js="company-name"></span> - <span data-js="company-phone"></span>
+    </h2>
+  </header>
+
+  <form action="/" data-js="register-form">
+    <p>Imagem: <input type="url" data-js="url-image"></p>
+    <p>Marca/Modelo: <input type="text" data-js="model"></p>
+    <p>Ano: <input type="text" data-js="year"></p>
+    <p>Placa: <input type="text" data-js="board"></p>
+    <p>Cor: <input type="text" data-js="color"></p>
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <table>
+    <thead>
+      <th>Imagem do carro</th>
+      <th>Marca/Modelo</th>
+      <th>Ano</th>
+      <th>Placa</th>
+      <th>Cor</th>
+    </thead>
+    <tbody></tbody>
+  </table>
 
   <script src="dom.js"></script>
   <script src="challenge-29.js"></script>
