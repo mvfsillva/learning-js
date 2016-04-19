@@ -78,7 +78,5 @@
     return Array.prototype.some.apply(this.element, arguments);
   };
 
-
-
   window.DOM = DOM;
 })(window, document);
