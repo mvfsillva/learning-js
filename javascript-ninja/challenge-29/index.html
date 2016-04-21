@@ -12,10 +12,10 @@
   </header>
 
   <form action="/" data-js="register-form">
-    <p>Imagem: <input type="url" data-js="url-image"></p>
-    <p>Marca/Modelo: <input type="text" data-js="model"></p>
+    <p>Imagem: <input type="url" data-js="image"></p>
+    <p>Marca/Modelo: <input type="text" data-js="brand-model"></p>
     <p>Ano: <input type="text" data-js="year"></p>
-    <p>Placa: <input type="text" data-js="board"></p>
+    <p>Placa: <input type="text" data-js="plate"></p>
     <p>Cor: <input type="text" data-js="color"></p>
     <button type="submit">Cadastrar</button>
   </form>
@@ -28,7 +28,7 @@
       <th>Placa</th>
       <th>Cor</th>
     </thead>
-    <tbody></tbody>
+    <tbody data-js="info-car"></tbody>
   </table>
 
   <script src="dom.js"></script>

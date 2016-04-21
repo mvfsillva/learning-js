@@ -1,4 +1,4 @@
-(function(DOM) {
+(function($) {
   'use strict';
 
   /*
@@ -40,6 +40,16 @@
     return{
       init: function(){
         this.companyInfo();
+        this.initEvents();
+      },
+
+      initEvents: function initEvents(){
+        $('[data-js="register-form"]').on('submit', this.handleSubmit);
+      },
+
+      handleSubmit: function handleSubmit(e){
+        e.preventDefault();
+        console.log('submit');
       },
 
       companyInfo: function companyInfo() {
@@ -54,10 +64,10 @@
           return;
 
         var data = JSON.parse(this.responseText);
-        var $companyName = new DOM('[data-js="company-name"]');
-        var $companyPhone = new DOM('[data-js="company-phone"]');
-        $companyName.get()[0].textContent = data.name;
-        $companyPhone.get()[0].textContent = data.phone;
+        var $companyName = $('[data-js="company-name"]').get();
+        var $companyPhone = $('[data-js="company-phone"]').get();
+        $companyName.textContent = data.name;
+        $companyPhone.textContent = data.phone;
       },
 
       isReady: function isReady() {
