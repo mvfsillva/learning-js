@@ -23,4 +23,4 @@ nesse arquivo, dentro do `console.log`, o link para o pull request no seu
 projeto.
 */
 
-console.log('Link do pull request do seu projeto');
+console.log('https://github.com/mvfsilva/learning-js/tree/master/javascript-ninja/carshop');
