@@ -2,12 +2,22 @@
   'use strict';
 
   var ajax = new XMLHttpRequest();
-  ajax.open('GET', 'http://localhost:3000/user/joana');
-  ajax.send();
+  ajax.open('POST', 'http://localhost:3000/user');
+  ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  ajax.send('username=roberto&age=32');
 
-  ajax.addEventListener('readystatechange', function(e){
+  console.log('Cadastrando usuário...');
+  ajax.onreadystatechange = function(){
     if(ajax.readyState === 4)
-      console.log(ajax.responseText, ajax.status);
-  }, false);
+      console.log('Usuario cadastrado!', ajax.responseText);
+  };
 
+  var get = new XMLHttpRequest();
+  get.open('GET', 'http://localhost:3000/user/joao');
+  get.send();
+  get.onreadystatechange = function(){
+    if(get.readyState === 4)
+      console.log(get.responseText);
+  };
 })();
+
