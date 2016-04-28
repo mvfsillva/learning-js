@@ -45,7 +45,20 @@ app.get('/user/:username', function(request, response){
 app.post('/user', function(request, response){
   var username = request.body.username;
   var age = request.body.age;
-  response.json({username: username, age: age});
+  var user = request.body.user;
+  var hasUser = users.some(function(user){
+    return user.username === username;
+  });
+
+  if(!hasUser){
+    users.push({
+      username: username,
+      age: age,
+      user: user
+    });
+  }
+
+  response.json(users);
 });
 
 app.listen(3000);

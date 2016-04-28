@@ -13,11 +13,11 @@
   };
 
   var get = new XMLHttpRequest();
-  get.open('GET', 'http://localhost:3000/user/joao');
+  get.open('GET', 'http://localhost:3000/user/roberto');
   get.send();
   get.onreadystatechange = function(){
     if(get.readyState === 4)
-      console.log(get.responseText);
+      console.log(JSON.parse(get.responseText));
   };
 })();
 
