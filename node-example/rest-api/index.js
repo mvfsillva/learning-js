@@ -1,23 +1,23 @@
 'use strict';
 var express = require('express');
 var cors = require('cors');
+var bodyParser = require('body-parser');
 var app = express();
 
-var users = {
-  joao: {
-    nome: 'João',
-    idade: 30
+var users = [
+  {
+    username: 'joao',
+    name: 'João',
+    age: 30
   },
-  maria: {
-    nome: 'Maria',
-    idade: 22
-  },
-  marcus:{
-    nome: 'Marcus',
-    idade: 24
+  {
+    username: 'maria',
+    name: 'Maria',
+    age: 22
   }
-};
+];
 
+app.use(bodyParser.urlencoded({ extended: false}));
 app.use(cors());
 
 app.get('/', function (request, response) {
@@ -30,9 +30,22 @@ app.get('/user', function(request, response){
 
 app.get('/user/:username', function(request, response){
   var username = request.params.username;
-  if(users[username])
-    return response.json(users[username]);
+  var hasUser = users.some(function(user){
+    return user.username === username;
+  });
+
+  if(hasUser){
+    return response.json(users.filter(function(user){
+      return user.username === username;
+    }));
+  }
   response.status(404).json({error: 'Usuario não encontrado!'});
+});
+
+app.post('/user', function(request, response){
+  var username = request.body.username;
+  var age = request.body.age;
+  response.json({username: username, age: age});
 });
 
 app.listen(3000);
