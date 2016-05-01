@@ -2,35 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>mvfsilva cars</title>
+  <title>Cara Shopping</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
-  <header>
-    <h2>
-      <span data-js="company-name"></span> - <span data-js="company-phone"></span>
-    </h2>
-  </header>
-
-  <form action="/" data-js="register-form">
-    <p>Imagem: <input type="url" data-js="image"></p>
-    <p>Marca/Modelo: <input type="text" data-js="brand-model"></p>
-    <p>Ano: <input type="text" data-js="year"></p>
-    <p>Placa: <input type="text" data-js="plate"></p>
-    <p>Cor: <input type="text" data-js="color"></p>
-    <button type="submit">Cadastrar</button>
-  </form>
-
-  <table>
-    <thead>
-      <th>Imagem do carro</th>
-      <th>Marca/Modelo</th>
-      <th>Ano</th>
-      <th>Placa</th>
-      <th>Cor</th>
-    </thead>
-    <tbody data-js="info-car"></tbody>
-  </table>
-
+  <section class="container">
+    <header class="">
+      <h2><span data-js="company-name"></span> - <span data-js="company-phone"></span></h2>
+    </header>
+    <form action="/" data-js="register-form">
+      <div class="form-group row">
+        <div class="col-md-6">
+          <label>Image</label>
+          <input type="url" class="form-control" data-js="image">
+        </div>
+        <div class="col-md-3">
+          <label>Year: </label>
+          <input type="text" class="form-control" data-js="year">
+        </div>
+        <div class="col-md-3">
+          <label>Brand/Model: </label>
+          <input type="text" class="form-control" data-js="brand-model">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-md-6">
+          <label>Plate:</label>
+          <input type="text" class="form-control" data-js="plate">
+        </div>
+        <div class="col-md-6">
+          <label>Color:</label>
+          <input type="text" class="form-control" data-js="color">
+        </div>
+      </div>
+      <footer class="form-group row">
+        <div class="col-md-6">
+          <button class="btn btn-primary" type="submit">Register</button>
+        </div>
+      </footer>
+    </form>
+  </section>
+  <section class="container">
+    <table class="table table-striped">
+      <thead>
+        <th>Image car</th>
+        <th>Brand/Model</th>
+        <th>Year</th>
+        <th>Plate</th>
+        <th>Color</th>
+      </thead>
+      <tbody data-js="info-car"></tbody>
+    </table>
+  </section>
   <script src="dom.js"></script>
   <script src="app.js"></script>
 </body>
