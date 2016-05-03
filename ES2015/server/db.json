@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "mvfsilva"
+    },
+    {
+      "title": "es2015",
+      "author": "mvfsilva teste",
+      "id": 2
+    },
+    {
+      "title": "teste",
+      "author": "teste 3",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
