@@ -10,6 +10,7 @@
     var $tdYear  = document.createElement('td');
     var $tdPlate = document.createElement('td');
     var $tdColor = document.createElement('td');
+    var $tdRemove = document.createElement('td');
 
     return {
 
@@ -35,6 +36,10 @@
         return $fragment.appendChild($tr);
       },
 
+      // removeCar: function removeCar(argument) {
+      //   return car.slice(0,1);
+      // },
+
       getNewCar: function getNewCar() {
         $image.src = $('[data-js="image"]').get().value;
         $tdImage.appendChild($image);
@@ -42,6 +47,7 @@
         $tdYear.textContent = $('[data-js="year"]').get().value;
         $tdPlate.textContent = $('[data-js="plate"]').get().value;
         $tdColor.textContent = $('[data-js="color"]').get().value;
+        $tdRemove.textContent = 'Remove';
       },
 
       setNewCar: function setNewCar() {
@@ -50,6 +56,7 @@
         $tr.appendChild($tdYear);
         $tr.appendChild($tdPlate);
         $tr.appendChild($tdColor);
+        $tr.appendChild($tdRemove);
       },
 
       companyInfo: function companyInfo() {
