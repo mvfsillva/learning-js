@@ -17,6 +17,7 @@
       init: function(){
         this.companyInfo();
         this.initEvents();
+        this.deleteCar();
       },
 
       initEvents: function initEvents(){
@@ -36,9 +37,11 @@
         return $fragment.appendChild($tr);
       },
 
-      // removeCar: function removeCar(argument) {
-      //   return car.slice(0,1);
-      // },
+      deleteCar: function deleteCar() {
+        $tr.addEventListener("click", function(){
+          document.getElementsByTagName('tbody')[0].removeChild(this);
+        });
+      },
 
       getNewCar: function getNewCar() {
         $image.src = $('[data-js="image"]').get().value;
@@ -47,7 +50,6 @@
         $tdYear.textContent = $('[data-js="year"]').get().value;
         $tdPlate.textContent = $('[data-js="plate"]').get().value;
         $tdColor.textContent = $('[data-js="color"]').get().value;
-        $tdRemove.textContent = 'Remove';
       },
 
       setNewCar: function setNewCar() {
@@ -56,7 +58,6 @@
         $tr.appendChild($tdYear);
         $tr.appendChild($tdPlate);
         $tr.appendChild($tdColor);
-        $tr.appendChild($tdRemove);
       },
 
       companyInfo: function companyInfo() {
