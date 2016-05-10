@@ -18,6 +18,15 @@ class Controler{
     docfrag.appendChild(doc.documentElement);
     return docfrag;
   }
+
+  elementButtonDelete(){
+    let tt = this.parseHtml('<div class="btn">Test</div>');
+    tt.addEventListener('click', function(){
+      console.log('test click');
+    }, false);
+    console.log(tt);
+    document.body.appendChild(tt);
+  }
 }
 
 export default Controller;
