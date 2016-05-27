@@ -24,4 +24,9 @@ class Account {
   }
 }
 
-export default Account;
+class CurrentAccount extends Account {
+  constructor(number, owner){
+    super(number, owner);
+    this.type = 'Current';
+  }
+}
