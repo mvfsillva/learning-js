@@ -6,22 +6,23 @@ class NegotiationController {
       this._inputQtd = $('#quantidade');
       this._inputVal = $('#valor');
       this._listNegotiations = new ListNegotiation();
-      this._negotiationsView = new NegotiationView($('#negociacoesView'));
 
+      this._negotiationsView = new NegotiationView($('#negociacoesView'));
       this._negotiationsView.update(this._listNegotiations);
     }
 
     insert(event) {
-        event.defaultPrevented();
 
-        this._listNegotiations.insert(this._createNegotiation());
-        this._negotiationsView.update(this._listNegotiations);
-        //this._isClearForm();
-    }
+      event.preventDefault();
+      this._listNegotiations.insert(this._createNegotiation());
+      this._negotiationsView.update(this._listNegotiations);
+
+      this._isClearForm();
+  }
 
     _createNegotiation(){
       return new Negotiation(
-        DateHelper.convertText(this._inputDate.value),
+        DateHelper.textToDate(this._inputDate.value),
         this._inputQtd.value,
         this._inputVal.value
       );
