@@ -8,6 +8,8 @@
 </head>
 <body class="container">
     <h1 class="text-center">Negociações</h1>
+    <div id="messageView"></div>
+
     <form class="form" onsubmit="negotiationController.insert(event)">
         <div class="form-group">
             <label for="data">Data</label>
@@ -23,6 +25,7 @@
         </div>
         <button class="btn btn-primary" type="submit">Incluir</button>
     </form>
+
     <div class="text-center">
         <button class="btn btn-primary text-center" type="button">Importar Negociações</button>
         <button class="btn btn-primary text-center" type="button">Apagar</button>
@@ -30,11 +33,15 @@
 
     <div id="negociacoesView"></div>
 
+    <script src="js/app/controllers/NegotiationController.js"></script>
+
     <script src="js/app/models/Negotiation.js"></script>
     <script src="js/app/models/ListNegotiation.js"></script>
-    <script src="js/app/controllers/NegotiationController.js"></script>
-    <script src="js/app/helpers/DateHelper.js"></script>
+
+    <script src="js/app/views/View.js"></script>
     <script src="js/app/views/NegotiationView.js"></script>
+
+    <script src="js/app/helpers/DateHelper.js"></script>
     <script type="text/javascript">
         let negotiationController = new NegotiationController();
     </script>
