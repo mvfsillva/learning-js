@@ -3,7 +3,7 @@ class ListNegotiation {
     this._negotiations = [];
   }
 
-  insert(_negotiations){
+  insert(negotiation){
     this._negotiations.push(negotiation);
   }
 
