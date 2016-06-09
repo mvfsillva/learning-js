@@ -3,7 +3,7 @@ class MessageView extends View{
     super(element);
   }
 
-  template(){
+  template(model){
     return model.text ? `<p class="alert alert-info">${model.text}</p>` : '<p></p>';
   }
 }
