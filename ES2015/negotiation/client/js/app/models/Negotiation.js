@@ -1,6 +1,6 @@
 class Negotiation {
     constructor(date, qtd, val) {
-        this._date = new Date(data.getTime());
+        this._date = new Date(date.getTime());
         this._qtd = 1;
         this._val = 0.0;
         Object.freeze(this); // makes all read only

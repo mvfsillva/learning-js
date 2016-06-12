@@ -8,6 +8,7 @@ function sum(num1, num2) {
   if(isNaN(num1) || isNaN(num2)){
     return new Error('Os parâmetros devem ser números');
   }
+
   return num1 + num2;
 }
 
