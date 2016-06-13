@@ -10,4 +10,8 @@ class ListNegotiation {
   get negotiations(){
     return [].concat(this._negotiations);
   }
+
+  clear(){
+      this._negotiations = [];
+  }
 }
