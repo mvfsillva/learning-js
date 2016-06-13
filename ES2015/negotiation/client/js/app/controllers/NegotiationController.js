@@ -36,9 +36,7 @@ class NegotiationController {
     }
 
     _isClearForm(){
-      this._inputDate.value = '';
-      this._inputQtd.value = 1;
-      this._inputVal.value = 0.0;
+      $('[data-js="form"]').reset();
       this._inputDate.focus();
     }
 }

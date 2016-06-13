@@ -9,7 +9,7 @@
 <body class="container">
     <h1 class="text-center">Negociações</h1>
     <div data-js="messageView"></div>
-    <form class="form" onsubmit="negotiationController.insert(event)">
+    <form class="form" data-js="form" onsubmit="negotiationController.insert(event)">
         <div class="form-group">
             <label for="data">Data</label>
             <input type="date" data-js="data" class="form-control"  autofocus/>
