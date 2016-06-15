@@ -1,13 +1,13 @@
 class Negotiation {
     constructor(date, qtd, val) {
         this._date = new Date(date.getTime());
-        this._qtd = 1;
-        this._val = 0.0;
+        this._qtd = qtd;
+        this._val = val;
         Object.freeze(this); // makes all read only
     }
 
     get volume() {
-        return this.qtd * this.val;
+        return this._qtd * this._val;
     }
 
     get date() {
@@ -19,6 +19,6 @@ class Negotiation {
     }
 
     get val() {
-        this._val;
+        return this._val;
     }
 }
