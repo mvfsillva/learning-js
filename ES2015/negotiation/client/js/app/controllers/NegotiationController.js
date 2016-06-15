@@ -3,9 +3,9 @@ class NegotiationController {
     constructor() {
         let $ = document.querySelector.bind(document);
         this._form = $('[data-js="form"]');
-        this._inputDate = $('[data-js="data"]');
-        this._inputQtd = $('[data-js="quantidade"]');
-        this._inputVal = $('[data-js="valor"]');
+        this._inputDate = $('[data-js="date"]');
+        this._inputQtd = $('[data-js="qtd"]');
+        this._inputVal = $('[data-js="val"]');
 
         this._listNegotiations = new Bind(
             new ListNegotiation(), new NegotiationView($('[data-js="negotiations-view"]')), 'insert', 'clear'
