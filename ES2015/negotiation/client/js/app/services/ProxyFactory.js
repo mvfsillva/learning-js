@@ -12,10 +12,8 @@ class ProxyFactory {
             },
 
             set(target, prop, value, receiver) {
-                if (props.includes(prop)) {
-                    target[prop] = value;
+                if (props.includes(prop))
                     action(target);
-                }
                 return Reflect.set(target, prop, value, receiver);
             }
         });

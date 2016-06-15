@@ -1,7 +1,6 @@
 class ListNegotiation {
-    constructor(trap) {
+    constructor() {
         this._negotiations = [];
-        this._trap = trap;
     }
 
     insert(negotiation) {
@@ -14,6 +13,9 @@ class ListNegotiation {
 
     clear() {
         this._negotiations = [];
-        this._trap(this);
+    }
+
+    get volumeTotal(){
+        return this._negotiations.reduce((total, n) => total + n.volume, 0.0);
     }
 }

@@ -23,7 +23,7 @@ class NegotiationController {
 
     delete() {
         this._listNegotiations.clear();
-        this._message.text('Negociação apagada com sucesso!');
+        this._message.text = 'Negociação apagada com sucesso!';
     }
 
     _createNegotiation() {
